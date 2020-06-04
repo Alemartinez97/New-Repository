@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form id="formulario1">
+		<label for="">Codigo</label>
+        <input type="text" id="codigo"><br>
+    </br>
+        <label for="">Nombre</label>
+        <input type="text" id="nombre"><br>
+    </br>
+		<label for="">Marca</label>
+        <input type="text" id="marca"><br>
+    </br>
+		<label for="">Precio</label>
+        <input type="text" id="precio"><br>
+</br>
+        </button>
+	</form>
+
+    <button onclick="enviarDatos()">Enviar</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+
+        function enviarDatos() {
+
+           
+        let codigo = document.getElementById("codigo").value;
+        let nombre = document.getElementById("nombre").value;
+        let marca = document.getElementById("marca").value;
+        let precio= document.getElementById("precio").value;
+
+        let request = { codigo: codigo, nombre: nombre, marca: marca,precio: precio };
+
+            document.getElementById("resultado").innerHTML = JSON.stringify(request);
+            console.log("Detalle Producto: ",request)
+
+            setTimeout(function() {
+                document.getElementById("resultado").innerHTML = JSON.stringify(request) + "... Enviada exitosamente";
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

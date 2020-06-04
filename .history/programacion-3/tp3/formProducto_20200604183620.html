@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Cuadros de texto</title>
+        <!--Esta línea a continuación sirve para que los caracteres
+         como la ñ o tildes se visualicen correctamente-->
+	<meta charset="UTF-8">
+</head>
+<body>
+<!--Creamos una caja llamada contenedor. div es una etiqueta 
+contenedora que actúa como caja contenedora de otros elementos. 
+Cobra sentido con el uso de CSS-->
+<div id="contenedor">
+	<h2 id="encabezado">Ingrese Producto</h2>
+	<form id="formulario1">
+		<label for="">Codigo</label>
+        <input type="text" id="codigo"><br>
+    </br>
+        <label for="">Nombre</label>
+        <input type="text" id="nombre"><br>
+    </br>
+		<label for="">Marca</label>
+        <input type="text" id="marca"><br>
+    </br>
+		<label for="">Precio</label>
+        <input type="text" id="precio"><br>
+</br>
+        <button href="producto.html" onclick="enviarDatos()">Enviar Datos
+        </button>
+	</form>
+</div>	
+<script>
+
+    function enviarDatos() {
+
+        let codigo = document.getElementById("codigo").value;
+        let nombre = document.getElementById("nombre").value;
+        let marca = document.getElementById("marca").value;
+        let precio= document.getElementById("precio").value;
+
+        let request = { codigo: codigo, nombre: nombre, marca: marca,precio: precio };
+        alert("Detalle Producto",request)
+        document.getElementById("resultado").innerHTML = JSON.stringify(request);
+
+        setTimeout(function() {
+            document.getElementById("resultado").innerHTML = JSON.stringify(request) + "... Enviada exitosamente";
+        }, 3000);
+
+    }
+</script>
+</body>
+</html>
