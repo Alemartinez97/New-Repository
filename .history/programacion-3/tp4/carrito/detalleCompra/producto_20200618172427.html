@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <form class="form-group">
+            <p class="btn btn-primary">Aceite</p>
+        </br>
+        <p class="btn btn-primary">Precio por unidad: $50</p>
+        </br>
+            <label for="" class="btn btn-primary">Cantidad</label>
+            <input type="number" id="marca" class="form-control"  aria-describedby="emailHelp" required><br>
+        </br>
+        <p class="btn btn-primary">Total: $500</p>
+    </br>
+        </form>
+    
+
+        <a href="../carrito.html" class="btn btn-primary">Guardar</a>
+        <button onclick="enviarDatos()" class="btn btn-primary">pagar total</button>
+        <h3 id="resultado"></h3>
+        <script src="../../js/producto.js"></script>
+    </div>
+</body>
+</html>

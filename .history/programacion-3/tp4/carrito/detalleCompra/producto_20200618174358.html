@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <form class="form-group">
+            <div class="alert alert-primary" role="alert">
+                Producto: Aceite
+              </div>
+        </br>
+        <div class="alert alert-primary" role="alert">
+            Precio C/U: $50
+          </div>
+        </br>
+            <label for="">Cantidad</label>
+            <input type="number" id="marca" class="form-control"  aria-describedby="emailHelp" required><br>
+        </br>
+        <div class="alert alert-primary" role="alert">
+        Total: $500
+          </div>
+    </br>
+        </form>
+        <button onclick="enviarDatos()" class="btn btn-primary">Guardar</button>
+        <a href="../carrito.html" class="btn btn-primary">Carrito</a>
+        <a href="../total/index.html" class="btn btn-primary">Total</a>
+        <h3 id="resultado"></h3>
+        <script src="../../js/producto.js"></script>
+    </div>
+</body>
+</html>
